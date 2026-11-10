@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.unicentro.trabalho2pooii.controller.MenuController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="Conta">
+                    <items>
+                        <MenuItem fx:id="btnSair" mnemonicParsing="false" onAction="#btnSairOnAction" text="Sair" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Nota">
+                    <items>
+                        <MenuItem fx:id="btnNovaNota" mnemonicParsing="false" onAction="#btnNovaNotaOnAction" text="Criar Nota" />
+                        <MenuItem fx:id="miDesfazer" disable="true" mnemonicParsing="false" onAction="#btnDesfazerOnAction" text="Desfazer" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuOrdenar" mnemonicParsing="false" text="Ordenar por" />
+            </menus>
+        </MenuBar>
+        <Label fx:id="lblBemVindo" text="Bem vindo [nome]">
+            <font>
+                <Font size="19.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+            <content>
+                <FlowPane fx:id="flowNotas" alignment="CENTER" hgap="12.0" vgap="12.0">
+                    <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                    </padding>
+                </FlowPane>
+            </content>
+        </ScrollPane>
+    </children>
+</VBox>
